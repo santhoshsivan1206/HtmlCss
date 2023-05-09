@@ -3,13 +3,29 @@
 <head>
 	<title>BOOKTICKETNOW.com</title>
 	<style>
+		a {
+			background-color: #242333;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-right: 10px;
+			text-decoration:none;
+		}
+		
+		/* a:hover {
+  			color: red;
+  			
+		} */
+
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
 		}
 		header {
-			background-color: #333;
+			background-color: #242333;
 			color: #fff;
 			padding: 10px;
 			text-align: center;
@@ -25,11 +41,12 @@
 			padding: 0;
 		}
 		nav ul li {
+			color: #ccc;
 			display: inline-block;
 			margin: 0 10px;
 		}
 		nav a {
-			color: #333;
+			color:bisque;
 			text-decoration: none;
 			padding: 5px;
 		}
@@ -66,7 +83,7 @@
 			font-size: 16px;
 		}
 		input[type="submit"], input[type="reset"] {
-			background-color: #333;
+			background-color: #242333;
 			color: #fff;
 			padding: 10px;
 			border: none;
@@ -76,12 +93,12 @@
 		}
 		input[type="submit"]:hover, input[type="reset"]:hover {
 			background-color: #fff;
-			color: #333;
-			border: 1px solid #333;
+			color: #242333;
+			border: 1px solid #242333;
 		}
 		#now-showing-page table {
 			border-collapse: collapse;
-			border: 3px solid #333;
+			border: 3px solid #242333;
 			border-radius: 10px;
 			margin: 0 auto;
 			overflow: hidden;
@@ -91,11 +108,11 @@
 		#now-showing-page td {
 			padding: 10px;
 			text-align: center;
-			border: 2px solid #333;
+			border: 2px solid #242333;
 		}
 
 		#now-showing-page th {
-			background-color: #333;
+			background-color: #242333;
 			color: white;
 		}
 
@@ -130,7 +147,8 @@
 			<label for="seats">Select Number of Seats:</label>
 			<input type="number" name="seats" id="seats" min="1" max="10" value="tickets"/>
 			<br><br>
-			<input type="submit" onclick="bookTicket()" value="Book Now">
+			<!-- <input type="submit"  onclick="bookTicket()" value="Book Now"> -->
+			<a href="movieseat.html">Book Now</a>
 			<input type="reset" value="Reset">		
 		</form>
 	</section>
@@ -182,7 +200,10 @@
 	</section>
 	<script>
 		function bookTicket() {
- 			 alert("Booked successfully!");
+			console.log("Book Now button clicked");
+			window.location.href = "movieseat.html";
+
+
 		}
 		
 		const form = document.getElementById('signup-form');
